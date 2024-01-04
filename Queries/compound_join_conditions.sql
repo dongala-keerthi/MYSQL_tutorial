@@ -6,3 +6,9 @@ select oi.order_id, oi.product_id, oin.note
 from order_items oi
 join order_item_notes oin
  on oi.order_id=oin.order_id and oi.product_id=oin.product_id;
+ 
+ -- compound join conditions using outer join
+select oi.order_id, oi.product_id, oin.note
+from order_items oi
+left join order_item_notes oin
+ on oi.order_id=oin.order_id and oi.product_id=oin.product_id;
